@@ -19,6 +19,15 @@ if you want to cite our work, use:
 
 Check [this Colab Notebook](https://colab.research.google.com/drive/1Byil0r05MROO6peAhKOm_yy0bwuJSVhR?usp=sharing) to get started.
 
+It 
+1. clones the current repository
+2. installs the [required packages](requirements.txt)
+3. trains Siren(SH) on the landocean dataset
+4. predicts the following map:
+
+<img width="30%" src="doc/out_globe.png">
+<img width="60%" src="doc/out.png">
+
 ## Using Siren(SH)
 
 To use Spherical Harmonic embedding function with SirenNet, i.e., Siren(SH(lon,lat)), in your code, instantiate the `LocationEncoder` class in [locationencoder/locationencoder.py](locationencoder/locationencoder.py) with Siren and Spherical Harmonics and a hyperparameter dict `hparams` as follows:
