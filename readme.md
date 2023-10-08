@@ -25,8 +25,7 @@ It
 3. trains Siren(SH) on the landocean dataset
 4. predicts the following map:
 
-<img width="30%" src="doc/out_globe.png">
-<img width="60%" src="doc/out.png">
+<img width="30%" src="doc/out_globe.png"><img width="60%" src="doc/out.png">
 
 ## Using Siren(SH)
 
@@ -91,7 +90,7 @@ python experiments/exp_resolution.py
 
 ## Code Acknowledgements
 
-This repository uses and relies on on
+This repository uses and relies on
 * [SymPy](https://www.sympy.org/en/index.html) for the analytic calculation of spherical harmonic basis functions
 * [Pytorch Lightning](https://lightning.ai/) for smooth model fitting
 * the [SirenNet implementation](https://github.com/lucidrains/siren-pytorch) ([Sitzmann et al., 2020](https://arxiv.org/abs/2006.09661)) by [
