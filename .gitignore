@@ -1,0 +1,8 @@
+build
+results
+venv
+datasets
+lightning_logs
+*.DS_Store
+.idea
+*.pyc

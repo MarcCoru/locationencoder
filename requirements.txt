@@ -1,0 +1,16 @@
+torch==2.0.1
+numpy==1.24.3
+matplotlib
+pandas==2.0.2
+geopandas==0.13.2
+shapely
+tqdm
+einops
+lightning==2.0.3
+optuna
+scikit-learn
+pyyaml
+torchvision==0.15.2
+basemap
+wandb
+xarray
