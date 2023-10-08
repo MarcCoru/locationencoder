@@ -355,6 +355,8 @@ def fit(args):
                                        plot_crs='4326',
                                        )
 
+    return locationencoder
+
 
 if __name__ == '__main__':
     args = parse_args()
