@@ -1,7 +1,6 @@
 import os.path
-
-from model import SpatialEncoder
-from data import LandOceanDataModule, Inat2018DataModule, SeaIceDataModule, CheckerboardDataModule
+from locationencoder import LocationEncoder
+from data import LandOceanDataModule, Inat2018DataModule, CheckerboardDataModule
 import lightning as pl
 import optuna
 from lightning.pytorch.callbacks.early_stopping import EarlyStopping
@@ -70,12 +69,6 @@ def tune(positional_encoding_name, neural_network_name, dataset="landoceandatase
         regression = False
         presence_only = True
         loss_bg_weight = 5
-    elif dataset == "seaicedataset":
-        datamodule = SeaIceDataModule("/data/sphericalharmonics/sea_ice/")
-        num_classes = 1
-        regression = True
-        presence_only = False
-        loss_bg_weight = False
 
     def objective(trial: optuna.trial.Trial) -> float:
 
@@ -85,7 +78,7 @@ def tune(positional_encoding_name, neural_network_name, dataset="landoceandatase
         hparams["loss_bg_weight"] = loss_bg_weight
         hparams["regression"] = regression
 
-        spatialencoder = SpatialEncoder(
+        spatialencoder = LocationEncoder(
                             positional_encoding_name,
                             neural_network_name,
                             hparams=hparams
