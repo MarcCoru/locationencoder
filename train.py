@@ -272,7 +272,7 @@ def fit(args):
 
         model = LocationImageEncoder(imageencoder_checkpoint=imageencoder_checkpoint,
                                      locationencoder_checkpoint=locationencoder_checkpoint,
-                                     use_logits=True)
+                                     use_logits=False)
 
         result = pl.Trainer().test(model=model, datamodule=image_location_datamodule)
 

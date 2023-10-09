@@ -105,6 +105,7 @@ def tune(positional_encoding_name, neural_network_name, dataset="landoceandatase
 
     pruner = optuna.pruners.MedianPruner()
     study_name = f"{dataset}-{positional_encoding_name}-{neural_network_name}"
+    os.makedirs(f"{TUNE_RESULTS_DIR}/{dataset}/runs/", exist_ok=True)
     storage_name = f"sqlite:///{TUNE_RESULTS_DIR}/{dataset}/runs/{study_name}.db"
     study = optuna.create_study(study_name=study_name, direction="minimize", 
                                 storage=storage_name, load_if_exists=True, 

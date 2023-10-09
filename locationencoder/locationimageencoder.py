@@ -10,11 +10,12 @@ class LocationImageEncoder(pl.LightningModule):
     def __init__(self, imageencoder_checkpoint, locationencoder_checkpoint, use_logits=False,
                  lr=0.0045,
                  momentum=0.9,
-                 weight_decay=1e-4):
+                 weight_decay=1e-4,
+                 num_classes=8142):
         super().__init__()
 
         self.locationencoder = LocationEncoder.load_from_checkpoint(locationencoder_checkpoint)
-        self.imageencoder = ImageEncoder.load_from_checkpoint(imageencoder_checkpoint)
+        self.imageencoder = ImageEncoder.load_from_checkpoint(imageencoder_checkpoint, num_classes=num_classes)
         self.imageencoder.freeze()
 
         self.loss_fn = nn.CrossEntropyLoss()
