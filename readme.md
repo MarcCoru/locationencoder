@@ -17,7 +17,7 @@ if you want to cite our work, use:
 
 ## Getting Started
 
-Check [this Colab Notebook](https://colab.research.google.com/drive/1Byil0r05MROO6peAhKOm_yy0bwuJSVhR?usp=sharing) to get started.
+Check [this Colab Notebook](https://colab.research.google.com/drive/1Byil0r05MROO6peAhKOm_yy0bwuJSVhR?usp=sharing) to get started. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Byil0r05MROO6peAhKOm_yy0bwuJSVhR?usp=sharing)
 
 It 
 1. clones the current repository
