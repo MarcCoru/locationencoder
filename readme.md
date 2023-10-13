@@ -8,11 +8,14 @@ a global scale or in polar regions, which are not represented well by existing a
 
 if you want to cite our work, use:
 ```bibtex
-@unpublished{russwurm2023,
-    title = {Geographic Location Encoding with Spherical Harmonics and Sinusoidal Representation Networks},
-    author = {Marc Rußwurm and Konstantin Klemmer and Esther Rolf and Robin Zbinden and Devis Tuia},
-    year = {2023},
-    note = {Under Submission}
+@misc{rußwurm2023locationencoding,
+      title={Geographic Location Encoding with Spherical Harmonics and Sinusoidal Representation Networks}, 
+      author={Marc Rußwurm and Konstantin Klemmer and Esther Rolf and Robin Zbinden and Devis Tuia},
+      year={2023},
+      eprint={2310.06743},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
 
 ## Getting Started
