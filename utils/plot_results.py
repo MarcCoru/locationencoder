@@ -155,8 +155,15 @@ def draw_map(y, plot_points, title, bds=[-180,-90,180,90]):
     map = Basemap(*bds)
     ax = plt.gca()
 
+    if y.type() == "torch.LongTensor": # classification
+        vmin = 0
+        vmax = int(y.max())
+    else: # binary probability
+        vmin = 0
+        vmax = 1
+
     # ax.scatter(points.theta.apply(np.rad2deg), points.phi.apply(np.rad2deg), c=points.land, s=2)
-    map.imshow(y.cpu().detach().numpy(), origin="lower", interpolation="none", cmap="RdBu_r", vmin=0, vmax=1)
+    map.imshow(y.cpu().detach().numpy(), origin="lower", interpolation="none", cmap="RdBu_r", vmin=vmin, vmax=vmax)
 
     if plot_points is not None:
         map.scatter(plot_points[:,0], plot_points[:,1], c="red")
@@ -173,9 +180,9 @@ def draw_map(y, plot_points, title, bds=[-180,-90,180,90]):
     return fig
 
 
-def draw_globe(y, lonlats, plot_points, title):
+def draw_globe(values, lonlats, plot_points, title):
 
-    y = y.squeeze()
+    values = values.squeeze()
 
     fig = plt.figure()
     map = Basemap(projection='ortho', lat_0=45, lon_0=30, resolution='l')
@@ -191,7 +198,7 @@ def draw_globe(y, lonlats, plot_points, title):
     map.drawparallels(np.arange(-90, 90, 30))
 
     lons, lats = lonlats.T
-    values = y.detach().numpy()  # .reshape(-1)
+    values = values.detach().numpy()  # .reshape(-1)
 
     x, y = map(lons.numpy() % 360, lats.numpy())
 

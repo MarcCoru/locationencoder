@@ -20,6 +20,7 @@ from utils import (
     count_parameters,
     find_best_checkpoint,
     set_default_if_unset,
+    PlotIntermediateResultsCallback
 )
 
 from locationencoder import LocationImageEncoder, LocationEncoder
@@ -171,7 +172,8 @@ def fit(args):
     timer = Timer()
     callbacks = [
         EarlyStopping(monitor="val_loss", mode="min", patience=hparams["patience"]),
-        timer
+        timer,
+        PlotIntermediateResultsCallback()
     ]
     if args.save_model:
         callbacks += [ModelCheckpoint(
