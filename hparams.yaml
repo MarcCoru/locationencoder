@@ -330,14 +330,12 @@ inat2018:
       lr: 0.0021545750923899
       wd: 5.462617525894927e-07
   sphericalharmonics-linear:
-    embedding_dim: 32
     legendre_polys: 20
     optimizer:
       lr: 0.0011960331534399
       wd: 3.7217812029123536e-08
   sphericalharmonics-mlp:
     dim_hidden: 128
-    embedding_dim: 16
     legendre_polys: 20
     num_layers: 2
     optimizer:
@@ -345,7 +343,6 @@ inat2018:
       wd: 4.7626079582758585e-06
   sphericalharmonics-siren:
     dim_hidden: 128
-    embedding_dim: 32
     legendre_polys: 25
     num_layers: 3
     optimizer:
@@ -353,7 +350,6 @@ inat2018:
       wd: 6.706856265714853e-08
   sphericalharmonics-fcnet:
     dim_hidden: 64
-    embedding_dim: 16
     legendre_polys: 30
     optimizer:
       lr: 0.0005493646556314
@@ -764,6 +760,7 @@ checkerboard:
       lr: 0.0552975640680226
       wd: 5.839935417010342e-05
   sphericalharmonics-linear:
+    legendre_polys: 25
     optimizer:
       lr: 0.0685842189705988
       wd: 0.0001556865183402
