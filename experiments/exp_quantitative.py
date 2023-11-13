@@ -15,6 +15,8 @@ def parse_args():
     parser.add_argument('--nn', default=["siren"], type=str, nargs='+', help='neural network(s)', choices=["linear", "siren", "fcnet", "mlp"])
     parser.add_argument('--num-seeds', default=5, type=int, help='number of random seeds')
     parser.add_argument('--gpus', default='-1', type=int, nargs='+', help='which gpus to use; if unset uses -1 which we map to auto')
+    parser.add_argument('--accelerator', default='auto', type=str,
+                        help='lightning accelerator')
 
     parser.add_argument('-r', '--resume-ckpt-from-results-dir', action="store_true",
                         help="searches through provided results dir and resumes from suitable checkpoint "
@@ -128,6 +130,7 @@ def fit_models(args):
                           use_expnamehps=False,
                           matplotlib=False,
                           matplotlib_show=False,
+                          accelerator=args.accelerator,
                           checkerboard_scale=1,
                           max_epochs=None,
                           min_radius=None) # take from hparams file
