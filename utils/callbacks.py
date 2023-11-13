@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from utils import plot_predictions
 import os
+import locationencoder.pe as pe
 
 def plot_weights(pl_module,
                  current_epoch,
@@ -58,10 +59,11 @@ class PlotIntermediateResultsCallback(pl.Callback):
             os.makedirs(savepath, exist_ok=True)
             print(f"saving {savepath}")
 
-            plot_weights(pl_module,
-                         trainer.current_epoch,
-                         savepath=os.path.join(savepath, "weights.pdf")
-                         )
+            if isinstance(pl_module.positional_encoder, pe.SphericalHarmonics):
+                plot_weights(pl_module,
+                             trainer.current_epoch,
+                             savepath=os.path.join(savepath, "weights.pdf")
+                             )
 
             plot_predictions(pl_module,
                              savepath=os.path.join(savepath, "predictions.pdf"))
