@@ -26,7 +26,7 @@ def calc_ylm(l, m):
 
     Ylm = (-1)**m * sqrt(2) * Plm_bar * sin(Abs(m) * phi)
   elif m == 0:
-    Ylm = sqrt((2*l + 1) / 4 * pi) * assoc_legendre(l, m, cos(theta))
+    Ylm = sqrt((2*l + 1) / (4 * pi)) * assoc_legendre(l, m, cos(theta))
   else: # m > 0
     Plm = assoc_legendre(l, m, cos(theta))
     Plm_bar = sqrt(((2 * l + 1) / (4 * pi)) * (factorial(l - m) / factorial(l + m))) * Plm
