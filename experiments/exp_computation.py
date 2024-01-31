@@ -163,8 +163,8 @@ def plot_comp(df, ydim="test_duration"):
 def main():
     results_dir = 'results/train/exp_computation'
     dataset = 'checkerboard'
-    # args = fit_sh()
-    #fit_comparison()
+    args = fit_sh()
+    fit_comparison()
 
     df = extract_comp_df(results_dir, dataset)
     plot_comp(df, ydim="test_duration")
