@@ -11,6 +11,7 @@ optuna
 scikit-learn
 pyyaml
 torchvision==0.15.2
+torchaudio==2.0.2
 basemap
 wandb
 xarray
