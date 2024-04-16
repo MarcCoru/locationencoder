@@ -2,19 +2,19 @@
 
 <img src="doc/fig2.png">
 
-Paper TL;DR:
-> We recommend to use Siren for any problem involving geographic coordinates and Spherical Harmonic embeddings for problems that involve data at
-a global scale or in polar regions, which are not represented well by existing approaches.
+For a paper summary, please click on the youtube video below.
+
+[![ICLR video](https://img.youtube.com/vi/zp0672w0D7g/0.jpg)](https://www.youtube.com/watch?v=[zp0672w0D7g](https://youtu.be/zp0672w0D7g))
+
+You can find the paper on [ArXiv](https://arxiv.org/abs/2310.06743) and [OpenReview](https://openreview.net/pdf?id=PudduufFLa)
 
 if you want to cite our work, use:
 ```bibtex
-@misc{rußwurm2023locationencoding,
+@inproceedings{{rußwurm2023locationencoding,
       title={Geographic Location Encoding with Spherical Harmonics and Sinusoidal Representation Networks}, 
       author={Marc Rußwurm and Konstantin Klemmer and Esther Rolf and Robin Zbinden and Devis Tuia},
-      year={2023},
-      eprint={2310.06743},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+      year={2024},
+      booktitle={The Twelfth International Conference on Learning Representations}
 }
 ```
 
