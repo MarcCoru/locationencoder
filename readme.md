@@ -10,11 +10,13 @@ You can find the paper on [ArXiv](https://arxiv.org/abs/2310.06743) and [OpenRev
 
 if you want to cite our work, use:
 ```bibtex
-@inproceedings{{rußwurm2023locationencoding,
+@inproceedings{russwurm2024locationencoding,
       title={Geographic Location Encoding with Spherical Harmonics and Sinusoidal Representation Networks}, 
       author={Marc Rußwurm and Konstantin Klemmer and Esther Rolf and Robin Zbinden and Devis Tuia},
       year={2024},
-      booktitle={The Twelfth International Conference on Learning Representations}
+      booktitle = {Proceedings of the International Conference on Learning Representations (ICLR)},
+      year = {2024},
+      url = {https://iclr.cc/virtual/2024/poster/18690}
 }
 ```
 
