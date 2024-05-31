@@ -2,9 +2,9 @@
 
 <img src="doc/fig2.png">
 
-For a paper summary, please click on the youtube video below.
+For a paper summary, please click on the youtube video below or click [this link](https://www.youtube.com/watch?v=zp0672w0D7g).
 
-[![ICLR video](https://img.youtube.com/vi/zp0672w0D7g/0.jpg)](https://www.youtube.com/watch?v=[zp0672w0D7g](https://youtu.be/zp0672w0D7g))
+[![ICLR video](https://img.youtube.com/vi/zp0672w0D7g/0.jpg)](https://www.youtube.com/watch?v=zp0672w0D7g)
 
 You can find the paper on [ArXiv](https://arxiv.org/abs/2310.06743) and [OpenReview](https://openreview.net/pdf?id=PudduufFLa)
 
